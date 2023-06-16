@@ -1,10 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
+    "build": "pnpm with-env turbo run build",
+    "dev": "pnpm with-env turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "with-env": "dotenv -e .env.local --"
   },
   "devDependencies": {
     "@turbo/gen": "^1.9.7",
